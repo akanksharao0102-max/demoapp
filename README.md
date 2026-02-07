@@ -36,4 +36,4 @@ It includes multiple pages like Home, About, Services, and Contact with a contac
    http://localhost:8000
 
 ## Author
-Your Name
+Akanksha Rao
