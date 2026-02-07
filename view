@@ -1,0 +1,12 @@
+views/
+ ├── layouts/
+ │    ├── app.blade.php
+ │    ├── header.blade.php
+ │    └── footer.blade.php
+ │
+ ├── home.blade.php
+ ├── about.blade.php
+ ├── services.blade.php
+ ├── contact.blade.php
+ ├── login.blade.php
+ └── register.blade.php

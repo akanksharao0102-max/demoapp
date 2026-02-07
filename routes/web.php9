@@ -1,0 +1,39 @@
+<?php
+
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContactController;
+
+/*
+|--------------------------------------------------------------------------
+| Public Pages
+|--------------------------------------------------------------------------
+*/
+
+Route::get('/', fn () => view('home'));
+Route::get('/about', fn () => view('about'));
+Route::get('/services', fn () => view('services'));
+Route::get('/contact', fn () => view('contact'));
+
+/*
+|--------------------------------------------------------------------------
+| Contact Form Submit
+|--------------------------------------------------------------------------
+*/
+Route::post('/contact', [ContactController::class, 'store'])
+    ->name('contact.store');
+
+/*
+|--------------------------------------------------------------------------
+| Auth Pages (temporary simple)
+|--------------------------------------------------------------------------
+*/
+Route::get('/login', fn () => view('login'))->name('login');
+Route::get('/register', fn () => view('register'));
+
+/*
+|--------------------------------------------------------------------------
+| Admin (Protected)
+|--------------------------------------------------------------------------
+*/
+Route::get('/admin/inquiries', [ContactController::class, 'index'])
+    ->middleware('auth');
